@@ -1,17 +1,17 @@
-#spring.jpa:
-#  database: postgresql
-#  hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
-#  hibernate.ddl-auto: update
-#  propertis.hibernate.format_sql: true
-#  show-sql: true
+spring.jpa:
+  database: postgresql
+  hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+  hibernate.ddl-auto: update
+  propertis.hibernate.format_sql: true
+  show-sql: true
 #
-#spring.datasource:
-#  hikari.maximum-pool-size: 4
-#  url:
-#  username:
-#  password:
-#  platform:
-#  driver-class-name: org.postgresql.Driver
+spring.datasource:
+  hikari.maximum-pool-size: 4
+  url: jdbc:postgresql://34.64.97.59/snsdb?useSSL=false&characterEncoding=UTF-8
+  username:
+  password:
+  platform:
+  driver-class-name: org.postgresql.Driver
 
 
 server:
