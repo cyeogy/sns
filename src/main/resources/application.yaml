@@ -7,7 +7,7 @@ spring.jpa:
 #
 spring.datasource:
   hikari.maximum-pool-size: 4
-  url: jdbc:postgresql://34.64.97.59/snsdb?useSSL=false&characterEncoding=UTF-8
+  url: jdbc:postgresql://34.64.97.59:5432/snsdb?useSSL=false&characterEncoding=UTF-8
   username: snsuser
   password: tuffhr2014?
   platform:
