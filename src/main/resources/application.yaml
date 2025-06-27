@@ -1,17 +1,22 @@
-spring.jpa:
-  database: postgresql
-  hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
-  hibernate.ddl-auto: update
-  propertis.hibernate.format_sql: true
-  show-sql: true
+#spring.jpa:
+#  database: postgresql
+#  hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+#  hibernate.ddl-auto: update
+#  propertis.hibernate.format_sql: true
+#  show-sql: true
 #
-spring.datasource:
-  hikari.maximum-pool-size: 4
-  url: jdbc:postgresql://34.64.97.59:5432/snsdb?useSSL=false&characterEncoding=UTF-8
-  username: snsuser
-  password: tuffhr2014?
-  platform:
-  driver-class-name: org.postgresql.Driver
+#spring.datasource:
+#  hikari.maximum-pool-size: 4
+#  url: jdbc:postgresql://34.64.97.59:5432/snsdb?useSSL=false&characterEncoding=UTF-8
+#  username: snsuser
+#  password: tuffhr2014?
+#  platform:
+#  driver-class-name: org.postgresql.Driver
+
+jwt:
+  secret-key: fast_campus.sns-application-2022.secret_key
+  # 30 days
+  token.expired-time-ms: 2592000000
 
 
 server:

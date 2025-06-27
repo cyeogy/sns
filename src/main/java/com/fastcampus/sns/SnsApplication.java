@@ -15,7 +15,7 @@ public class SnsApplication {
 		SpringApplication.run(SnsApplication.class, args);
 	}
 
-/*	@Bean
+	/*@Bean
 	public UserEntityRepository userEntityRepository() {
 		return Mockito.mock(UserEntityRepository.class);
 	}*/
