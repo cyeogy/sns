@@ -22,7 +22,7 @@ public class UserService {
     private final UserEntityRepository userEntityRepository;
     private final BCryptPasswordEncoder encoder;
 
-    @Value("${jwt.secret-key")
+    @Value("${jwt.secret-key}")
     private String secretKey;
 
     @Value("${jwt.token.expired-time-ms}")
