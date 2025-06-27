@@ -25,7 +25,7 @@ public class UserService {
     @Value("${jwt.secret-key")
     private String secretKey;
 
-    @Value("${jwt.token.expired-time-ms")
+    @Value("${jwt.token.expired-time-ms}")
     private Long expiredTimeMs;
 
     @Transactional
