@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Optional;
@@ -28,7 +29,7 @@ public class UserServiceTest {
     private UserEntityRepository userEntityRepository;
 
     @MockBean
-    private PasswordEncoder encoder;
+    private BCryptPasswordEncoder encoder;
 
     @Test
     void 회원가입이_정상적으로_동작하는_경우() {
