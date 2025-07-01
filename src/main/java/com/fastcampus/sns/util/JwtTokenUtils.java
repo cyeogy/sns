@@ -22,7 +22,7 @@ public class JwtTokenUtils {
     }
 
     private static Claims extractClaims(String token, String key) {
-        return Jwts.parserBuilder().setSigningKey(key)
+        return Jwts.parserBuilder().setSigningKey(getKey(key))
                 .build().parseClaimsJws(token).getBody();
     }
 
