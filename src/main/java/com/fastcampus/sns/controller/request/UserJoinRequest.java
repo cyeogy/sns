@@ -8,6 +8,6 @@ import lombok.Getter;
 // 회원가입할 때 회원가입 정보를 받아올 클래스
 public class UserJoinRequest {
 
-    private String userName;
+    private String name;
     private String password;
 }
