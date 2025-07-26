@@ -7,9 +7,9 @@ spring.jpa:
 
 spring.datasource:
   hikari.maximum-pool-size: 4
-  url: jdbc:postgresql://34.64.97.59:5432/snsdb?useSSL=false&characterEncoding=UTF-8
-  username: snsuser
-  password: tuffhr2014?
+  url: jdbc:postgresql://snsdb_g3f4_user:hITSIzgrrFItLtJrQNlCK8QaPWIQIAk1@dpg-d22g2ge3jp1c738sne5g-a.oregon-postgres.render.com/snsdb_g3f4
+  username: snsdb_g3f4_user
+  password: hITSIzgrrFItLtJrQNlCK8QaPWIQIAk1
   platform:
   driver-class-name: org.postgresql.Driver
 
