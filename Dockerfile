@@ -1,4 +1,4 @@
-FROM 11-jdk
+FROM amazoncorretto:11
 WORKDIR /app
 COPY target/sns-0.0.1-SNAPSHOT.jar /app/sns.jar
 ENTRYPOINT ["java", "-jar", "/app/sns.jar"]
