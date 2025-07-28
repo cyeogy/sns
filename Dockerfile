@@ -1,8 +1,6 @@
 FROM amazoncorretto:11
 WORKDIR /app
 COPY build/libs/sns-0.0.1-SNAPSHOT.jar app.jar
-ENV JAVA_HOME=/opt/java/openjdk
-ENV PATH=$JAVA_HOME/bin:$PATH
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
