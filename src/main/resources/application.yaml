@@ -7,7 +7,8 @@ spring.jpa:
 
 spring.datasource:
   hikari.maximum-pool-size: 4
-  url: jdbc:postgresql://snsdb_g3f4_user:hITSIzgrrFItLtJrQNlCK8QaPWIQIAk1@dpg-d22g2ge3jp1c738sne5g-a.oregon-postgres.render.com/snsdb_g3f4
+  # url: jdbc:postgresql:{external url @이후 ~ .com포함해서까지}:5432/{db이름}
+  url: jdbc:postgresql://dpg-d22g2ge3jp1c738sne5g-a.oregon-postgres.render.com:5432/snsdb_g3f4
   username: snsdb_g3f4_user
   password: hITSIzgrrFItLtJrQNlCK8QaPWIQIAk1
   platform:
