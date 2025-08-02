@@ -8,11 +8,13 @@ import com.fastcampus.sns.controller.response.UserLoginResponse;
 import com.fastcampus.sns.model.User;
 import com.fastcampus.sns.service.UserService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/users")
 @RequiredArgsConstructor
+@Slf4j
 public class UserController {
 
     private final UserService userService;
@@ -33,6 +35,7 @@ public class UserController {
     @PostMapping("/login")
     public Response<UserLoginResponse> login(@RequestBody UserLoginRequest request) {
         String token = userService.login(request.getName(), request.getPassword());
+        log.info("userName = {}", request.getName());
         return Response.success(new UserLoginResponse(token));
     }
 }

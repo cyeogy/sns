@@ -13,6 +13,7 @@ import com.fastcampus.sns.repository.LikeEntityRepository;
 import com.fastcampus.sns.repository.PostEntityRepository;
 import com.fastcampus.sns.repository.UserEntityRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class PostService {
 
     private final PostEntityRepository postEntityRepository;
@@ -29,6 +31,8 @@ public class PostService {
 
     @Transactional
     public void create(String title, String body, String userName) {
+
+        log.info("userName = {}", userName);
 
         // user find
         UserEntity userEntity = getUserEntityOrException(userName);
