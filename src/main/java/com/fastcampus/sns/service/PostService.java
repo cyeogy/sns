@@ -32,14 +32,15 @@ public class PostService {
     @Transactional
     public void create(String title, String body, String userName) {
 
-        log.info("userName = {}", userName);
+        log.info("userName={}", userName);
 
         // user find
         UserEntity userEntity = getUserEntityOrException(userName);
-        System.out.println("userName = " + userName);
+        log.info("userNameOfUserEntity={}", userEntity.getUserName());
 
         // post save
         PostEntity saved = postEntityRepository.save(PostEntity.of(title, body, userEntity));
+        log.info("userNameOfPostEntity={}", saved.getUser().getUserName());
         // return
     }
 
