@@ -32,6 +32,7 @@ public class PostService {
 
         // user find
         UserEntity userEntity = getUserEntityOrException(userName);
+        System.out.println("userName = " + userName);
 
         // post save
         PostEntity saved = postEntityRepository.save(PostEntity.of(title, body, userEntity));
