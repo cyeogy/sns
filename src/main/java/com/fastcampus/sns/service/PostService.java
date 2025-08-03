@@ -122,9 +122,11 @@ public class PostService {
     public void comment(Integer postId, String userName, String comment) {
         // post exist
         PostEntity postEntity = getPostEntityOrException(postId);
+        log.info("postwriter={}", postEntity.getUser().getUserName());
 
         // user find
         UserEntity userEntity = getUserEntityOrException(userName);
+        log.info("username={}", userEntity.getUserName());
 
         // comment save
         commentEntityRepository.save(CommentEntity.of(userEntity, postEntity, comment));

@@ -10,6 +10,7 @@ import com.fastcampus.sns.model.Comment;
 import com.fastcampus.sns.model.Post;
 import com.fastcampus.sns.service.PostService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.Authentication;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/v1/posts")
 @RequiredArgsConstructor
+@Slf4j
 public class PostController {
 
     private final PostService postService;
@@ -64,12 +66,15 @@ public class PostController {
 
     @PostMapping("/{postId}/comments")
     public Response<Void> comment(@PathVariable Integer postId, @RequestBody PostCommentRequest request, Authentication authentication) {
+        log.info("postId={}", postId);
+        log.info("comment={}", request.getComment());
+        log.info("authentication={}", authentication.getName());
         postService.comment(postId, authentication.getName(), request.getComment());
         return Response.success();
     }
 
     @GetMapping("/{postId}/comments")
-    public Response<Page<CommentResponse>> comment(@PathVariable Integer postId, Pageable pageable, Authentication authentication) {
+    public Response<Page<CommentResponse>> comment(@PathVariable Integer postId, Pageable pageable) {
         return Response.success(postService.getComments(postId, pageable).map(CommentResponse::fromComment));
     }
 }
